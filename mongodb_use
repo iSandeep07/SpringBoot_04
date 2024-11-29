@@ -1,0 +1,254 @@
+test> show dbs
+admin          40.00 KiB
+amazon         72.00 KiB
+config         60.00 KiB
+e-commerce    144.00 KiB
+journaldb      40.00 KiB
+local          72.00 KiB
+relationDemo  264.00 KiB
+test          152.00 KiB
+wanderlust    120.00 KiB
+test> use journaldb
+switched to db journaldb
+journaldb> show collections
+journalEntry
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749af4e0b277a5255a712e0"),
+    title: 'Sad',
+    content: 'I am Happy.',
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749af4e0b277a5255a712e0"),
+    title: 'Sad',
+    content: 'I am Happy.',
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: '2',
+    title: 'Sad',
+    content: 'I am Happy.',
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749af4e0b277a5255a712e0"),
+    title: 'Sad',
+    content: 'I am Happy.',
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: '2',
+    title: 'Sad',
+    content: 'Went to gym..',
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.deleteMany({})
+{ acknowledged: true, deletedCount: 3 }
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cbd00b1f211f09b481b5"),
+    title: 'Sad..',
+    content: 'Went to Party..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cbd00b1f211f09b481b5"),
+    title: 'Sad..',
+    content: 'Went to Party..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cbd00b1f211f09b481b5"),
+    title: 'Sad..',
+    content: 'Went to Party..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cd060b1f211f09b481b6"),
+    title: 'Dodo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cbd00b1f211f09b481b5"),
+    title: 'Sad..',
+    content: 'Went to Party..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cd060b1f211f09b481b6"),
+    title: 'Dodo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journalEntry.find()
+[
+  {
+    _id: ObjectId("6749bc9f8cf9e27e7929f714"),
+    title: 'Happy..',
+    content: 'Went to gym..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cbd00b1f211f09b481b5"),
+    title: 'Sad..',
+    content: 'Went to Party..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749cd060b1f211f09b481b6"),
+    title: 'Dodo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749f9dffe657b4042c44607"),
+    title: 'Dodddddo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749f9f3fe657b4042c44608"),
+    title: 'Bibooo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+journaldb>  db.journalEntry.deleteMany({})
+{ acknowledged: true, deletedCount: 5 }
+journaldb> show collections
+journal_entries
+journalEntry
+journaldb> db.journal_entries.find()
+[
+  {
+    _id: ObjectId("6749fbc6225eab1c5a497572"),
+    title: 'Bibooo..',
+    content: 'Went to Dance..',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  },
+  {
+    _id: ObjectId("6749fbd6225eab1c5a497573"),
+    title: 'Good..',
+    content: 'happy...',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journal_entries.find()
+[
+  {
+    _id: ObjectId("6749fbd6225eab1c5a497573"),
+    title: 'Good..',
+    content: 'happy...',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journal_entries.find()
+[
+  {
+    _id: ObjectId("6749fbd6225eab1c5a497573"),
+    title: 'Good..',
+    content: 'happy...',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb> db.journal_entries.find()
+[
+  {
+    _id: ObjectId("6749fbd6225eab1c5a497573"),
+    title: 'Good..',
+    content: 'Love you Sa...',
+    date: ISODate("2024-11-28T18:30:00.000Z"),
+    _class: 'com.springbot_04.springboot_04.entity.JournalEntry'
+  }
+]
+journaldb>
